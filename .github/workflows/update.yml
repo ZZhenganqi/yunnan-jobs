@@ -1,41 +1,17 @@
-name: 定时抓取云南公考编招信息
+name: 部署到 GitHub Pages
+
+# 说明：抓取不在 CI 上做。
+# 实测 GitHub Actions（海外服务器）访问国内政府站点成功率仅 6/20，
+# 用它产生的数据会覆盖本地 20/20 的完整结果，导致岗位数量反而变少。
+# 因此 CI 只负责「有提交就部署」，数据更新走本地抓取后推送。
 
 on:
-  schedule:
-    # UTC 时间；北京时间 = UTC + 8
-    # 每天 08:00 与 20:00（北京时间）各抓取一次
-    - cron: '0 0,12 * * *'
-  workflow_dispatch:   # 允许在 Actions 页面手动点一次立即抓取
+  push:
+    branches: [main]
+  workflow_dispatch:   # 允许手动触发一次部署
 
 jobs:
-  fetch:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: 抓取官方招聘信息
-        run: node scripts/fetch.mjs
-
-      - name: 提交更新后的数据
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ || true
-          if git diff --staged --quiet; then
-            echo "数据无变化，跳过提交"
-          else
-            git commit -m "chore(data): 更新招聘数据 $(date -u +'%Y-%m-%d %H:%M UTC')"
-            git push
-          fi
-
   deploy:
-    needs: fetch
     runs-on: ubuntu-latest
     permissions:
       contents: read
