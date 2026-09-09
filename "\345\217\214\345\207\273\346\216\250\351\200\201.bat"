@@ -2,46 +2,51 @@
 chcp 65001 >nul 2>&1
 cd /d "%~dp0"
 
+set LOG=%~dp0_push.log
+echo ============================================ >  "%LOG%"
+echo   云南公考编招平台 - 推送日志                    >> "%LOG%"
+echo   %date% %time%                                 >> "%LOG%"
+echo   仓库: https://github.com/ZZhengqian/yunnan-jobs >> "%LOG%"
+echo ============================================ >> "%LOG%"
+echo. >> "%LOG%"
+
 echo.
-echo ============================================
-echo    云南公考编招平台 - 一键推送到 GitHub
-echo ============================================
-echo.
-echo  目标仓库:  https://github.com/ZZhengqian/yunnan-jobs
-echo  本地已有 5 次提交待推送。
-echo.
-echo  正在推送...
-echo  如果弹出 GitHub 登录窗口，请用浏览器点 "Authorize" 授权。
+echo  正在推送到 GitHub...
+echo  详细日志同时写入 _push.log
+echo  如果弹出 GitHub 授权窗口（浏览器或通知中心），请点 Authorize
+echo  请保持本窗口在前台，不要关闭
 echo.
 
-git push -u origin main
-if errorlevel 1 (
+git push -u origin main 1>>"%LOG%" 2>&1
+set RC=%errorlevel%
+
+echo. >> "%LOG%"
+echo ----- 执行结果 ----- >> "%LOG%"
+echo git 退出码: %RC% >> "%LOG%"
+
+if %RC% neq 0 (
   echo.
-  echo  推送未完成。常见原因:
-  echo    1. 登录窗口被取消或没完成授权
-  echo    2. 浏览器授权后没回到本窗口
-  echo    3. 网络暂时不通
+  echo  推送失败 (git 退出码 %RC%)
+  echo  请打开本目录的 _push.log 查看详细原因
+  echo  然后把日志内容截图或复制给我
   echo.
-  echo  请重新双击本脚本再试一次。
+  echo  最常见原因:
+  echo    1. 错过了 GitHub 授权弹窗（去通知中心找，或重新双击本脚本）
+  echo    2. 凭据管理器没保存 token（重试时应该会自动重弹窗）
   echo.
-  pause
+  echo  按任意键关闭...
+  pause >nul
   exit /b 1
 )
 
+echo  推送成功！正在打开 GitHub 页面...
 echo.
-echo  推送成功！
-echo.
-echo  接下来只需两步:
-echo.
-echo  1. 已为你打开仓库的 Pages 设置页
-echo     把 Source 选成 "GitHub Actions"
-echo.
-echo  2. 打开 Actions 页面，手动点一次 "Run workflow"
-echo     跑完后会得到公网网址
-echo.
-echo  你的网址:  https://ZZhengqian.github.io/yunnan-jobs/
-echo  之后每天 08:00 和 20:00 自动更新。
-echo.
-start https://github.com/ZZhengqian/yunnan-jobs/settings/pages
+
 start https://github.com/ZZhengqian/yunnan-jobs/actions
+start https://github.com/ZZhengqian/yunnan-jobs/settings/pages
+echo  已打开 Actions 页面和 Pages 设置页面。
+echo  1. 在 Pages 页把 Source 选成 "GitHub Actions"
+echo  2. 进 Actions 页手动点 Run workflow 跑一次
+echo  3. 跑完就有公网网址
+echo.
 pause
