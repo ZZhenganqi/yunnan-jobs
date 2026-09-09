@@ -338,7 +338,9 @@ async function run() {
       const prevJobs = (JSON.parse(fs.readFileSync(OUT, 'utf8')).jobs) || [];
       const curIds = new Set(jobs.map((j) => j.id));
       const curUrls = new Set(jobs.map((j) => j.url));
-      const CUTOFF_DAYS = 90;
+      // 保留期放宽到一年：CI 抓取成功率远低于本地（海外访问国内站点），
+      // 过滤太激进会让数据在 CI 上逐次缩水。宁可多留，由前端按时间筛选。
+      const CUTOFF_DAYS = 365;
       const now = Date.now();
       for (const p of prevJobs) {
         if (curIds.has(p.id) || curUrls.has(p.url)) continue;
