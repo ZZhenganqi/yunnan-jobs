@@ -161,9 +161,34 @@ function timeBoost(date) {
   return { boost: -30, reason: '一年以上（可能已过期）' };
 }
 
+// 报名截止日期提取：公告写法五花八门，需兼容多种格式
+const DL_PATS = [
+  /报名[^\n。；]{0,24}?截[止至][^\n。；]{0,14}?((20\d{2})\s*[-/年.]\s*(\d{1,2})\s*[-/月.]\s*(\d{1,2}))/,
+  /截[止至][^\n。；]{0,18}?((20\d{2})\s*[-/年.]\s*(\d{1,2})\s*[-/月.]\s*(\d{1,2}))/,
+  /报名[时]?间[^\n。；]{0,30}?((20\d{2})\s*[-/年.]\s*(\d{1,2})\s*[-/月.]\s*(\d{1,2}))/,
+  /((20\d{2})\s*[-/年.]\s*(\d{1,2})\s*[-/月.]\s*(\d{1,2}))\s*[^\n。；]{0,8}?(?:前|截止)/,
+];
+
+function extractDeadline(txt) {
+  for (const p of DL_PATS) {
+    const m = txt.match(p);
+    if (m) return `${m[2]}-${String(m[3]).padStart(2, '0')}-${String(m[4]).padStart(2, '0')}`;
+  }
+  // 只写“9月1日”这类无年份的：按当前年推断，若已过则视为次年
+  const m2 = txt.match(/(?:报名[^\n。；]{0,24}?截[止至]|截[止至])[^\n。；]{0,14}?(\d{1,2})\s*月\s*(\d{1,2})\s*日/);
+  if (m2) {
+    const now = new Date();
+    let y = now.getFullYear();
+    const guess = new Date(`${y}-${String(m2[1]).padStart(2, '0')}-${String(m2[2]).padStart(2, '0')}`);
+    if (guess < now) y += 1;
+    return `${y}-${String(m2[1]).padStart(2, '0')}-${String(m2[2]).padStart(2, '0')}`;
+  }
+  return '';
+}
+
 /* ---------- 详情增强（可选） ---------- */
 
-async function enrichDetails(jobs, limit = 60, conc = 5) {
+async function enrichDetails(jobs, limit = 120, conc = 5) {
   const cands = jobs
     .filter(j => j.score >= 30 && !(j.flags || []).includes('考务流程'))
     .sort((a, b) => b.score - a.score)
@@ -210,10 +235,13 @@ async function enrichDetails(jobs, limit = 60, conc = 5) {
         const dm = txt.match(/(20\d{2})[-/年.](\d{1,2})[-/月.](\d{1,2})/);
         if (dm) j.date = `${dm[1]}-${String(dm[2]).padStart(2, '0')}-${String(dm[3]).padStart(2, '0')}`;
       }
-      const bm = txt.match(/(?:报名|截止|截至|报名截止)[^\n。]{0,26}?((20\d{2})年(\d{1,2})月(\d{1,2})日)/);
-      if (bm) {
-        j.deadline = `${bm[2]}-${String(bm[3]).padStart(2, '0')}-${String(bm[4]).padStart(2, '0')}`;
-        j.reasons.push('报名截止 ' + j.deadline);
+      // 只对在招岗位提取报名截止，避免把“部门决算”之类公告里的日期误当截止日
+      if ((j.flags || []).includes('在招')) {
+        const dl = extractDeadline(txt);
+        if (dl) {
+          j.deadline = dl;
+          j.reasons.push('报名截止 ' + dl);
+        }
       }
       if (/博士/.test(txt) && !/硕士|研究生/.test(txt)) {
         add -= 10; j.reasons.push('正文：仅提及博士');
@@ -292,6 +320,16 @@ async function run() {
   // 标题信息量有限，必须抓正文才能判断“要不要硕士 / 要不要这个专业 / 何时截止”
   if (!process.argv.includes('--no-detail')) await enrichDetails(jobs);
 
+  // 新增岗位检测：与上一次抓取对比，标记本次新出现的公告
+  const prevFile = path.join(ROOT, 'data', 'prev-ids.json');
+  const firstRun = !fs.existsSync(prevFile);
+  let newCount = 0;
+  if (!firstRun) {
+    let prev = new Set();
+    try { prev = new Set(JSON.parse(fs.readFileSync(prevFile, 'utf8'))); } catch { prev = new Set(); }
+    for (const j of jobs) if (!prev.has(j.id)) { j.isNew = true; newCount++; }
+  }
+
   jobs.sort((a, b) => (b.score - a.score) || (b.date.localeCompare(a.date)));
 
   const payload = {
@@ -299,6 +337,9 @@ async function run() {
       updatedAt: started.toISOString(),
       updatedAtLocal: started.toLocaleString('zh-CN', { hour12: false }),
       total: jobs.length,
+      newCount,
+      firstRun,
+      deadlineCount: jobs.filter(j => j.deadline).length,
       profile: { school: profile.school, major: profile.major, degree: profile.degree, politics: profile.politics },
       sources: sourceStatus,
     },
@@ -311,6 +352,8 @@ async function run() {
   // 同步输出 js 版本：让 index.html 双击（file://）也能直接读取，无需起服务器
   fs.writeFileSync(path.join(ROOT, 'data', 'jobs.js'),
     'window.__JOBS__=' + JSON.stringify(payload) + ';\n', 'utf8');
+  // 记录本次 id 集合，供下次判断“新增”
+  fs.writeFileSync(prevFile, JSON.stringify(jobs.map(j => j.id)));
 
   const okCnt = sourceStatus.filter(s => s.ok).length;
   console.log(`\n完成：${jobs.length} 条岗位 | 源 ${okCnt}/${SOURCES.length} 成功 | 输出 ${path.relative(ROOT, OUT)}`);

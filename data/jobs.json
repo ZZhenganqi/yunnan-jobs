@@ -1,8 +1,11 @@
 {
   "meta": {
-    "updatedAt": "2026-09-08T04:00:46.424Z",
-    "updatedAtLocal": "2026/9/8 12:00:46",
+    "updatedAt": "2026-09-08T10:50:09.923Z",
+    "updatedAtLocal": "2026/9/8 18:50:09",
     "total": 249,
+    "newCount": 0,
+    "firstRun": false,
+    "deadlineCount": 19,
     "profile": {
       "school": "云南农业大学",
       "major": "农业工程与信息技术",
@@ -172,14 +175,16 @@
         "30天内发布",
         "正文：硕士/研究生可报",
         "正文专业匹配：信息技术/计算机/软件",
-        "正文：应届可报"
+        "正文：应届可报",
+        "报名截止 2026-09-01"
       ],
       "flags": [
         "在招",
         "硕士可报",
         "专业匹配",
         "应届"
-      ]
+      ],
+      "deadline": "2026-09-01"
     },
     {
       "id": "aHR0cHM6Ly93Y2Iu",
@@ -260,14 +265,16 @@
         "30天内发布",
         "正文：硕士/研究生可报",
         "正文专业匹配：计算机",
-        "正文：应届可报"
+        "正文：应届可报",
+        "报名截止 2026-09-01"
       ],
       "flags": [
         "在招",
         "硕士可报",
         "专业匹配",
         "应届"
-      ]
+      ],
+      "deadline": "2026-09-01"
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
@@ -288,14 +295,16 @@
         "30天内发布",
         "正文：硕士/研究生可报",
         "正文专业匹配：计算机",
-        "正文：应届可报"
+        "正文：应届可报",
+        "报名截止 2026-09-01"
       ],
       "flags": [
         "在招",
         "硕士可报",
         "专业匹配",
         "应届"
-      ]
+      ],
+      "deadline": "2026-09-01"
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
@@ -316,14 +325,16 @@
         "30天内发布",
         "正文：硕士/研究生可报",
         "正文专业匹配：计算机",
-        "正文：应届可报"
+        "正文：应届可报",
+        "报名截止 2026-09-01"
       ],
       "flags": [
         "在招",
         "硕士可报",
         "专业匹配",
         "应届"
-      ]
+      ],
+      "deadline": "2026-09-01"
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
@@ -341,62 +352,6 @@
         "云南本地岗位",
         "在招/报名信号",
         "类别匹配：事业单位",
-        "30天内发布",
-        "正文：硕士/研究生可报",
-        "正文专业匹配：计算机",
-        "正文：应届可报"
-      ],
-      "flags": [
-        "在招",
-        "硕士可报",
-        "专业匹配",
-        "应届"
-      ]
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "2026年下半年中共云南省委统战部所属单位公开招聘人员公告",
-      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65822&ClassID=602",
-      "date": "2026-09-02",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 92,
-      "baseScore": 54,
-      "reasons": [
-        "云南本地岗位",
-        "在招/报名信号",
-        "类别匹配：事业单位",
-        "30天内发布",
-        "正文：硕士/研究生可报",
-        "正文专业匹配：计算机",
-        "正文：应届可报"
-      ],
-      "flags": [
-        "在招",
-        "硕士可报",
-        "专业匹配",
-        "应届"
-      ]
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "2026年下半年云南能源职业技术学院公开招聘人员公告",
-      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65826&ClassID=602",
-      "date": "2026-09-02",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "高校",
-      "score": 88,
-      "baseScore": 50,
-      "reasons": [
-        "云南本地岗位",
-        "在招/报名信号",
-        "类别匹配：高校",
         "30天内发布",
         "正文：硕士/研究生可报",
         "正文专业匹配：计算机",
@@ -458,44 +413,14 @@
         "30天内发布",
         "正文：硕士/研究生可报",
         "正文：应届可报",
-        "报名截止 2026-09-05"
+        "报名截止 2026-11-30"
       ],
       "flags": [
         "在招",
         "硕士可报",
         "应届"
       ],
-      "deadline": "2026-09-05"
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "2026年下半年云南旅游职业学院公开招聘人员公告",
-      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65824&ClassID=602",
-      "date": "2026-09-02",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "高校",
-      "score": 80,
-      "baseScore": 50,
-      "reasons": [
-        "云南本地岗位",
-        "在招/报名信号",
-        "类别匹配：高校",
-        "30天内发布",
-        "正文提及研究生学历",
-        "正文专业匹配：计算机",
-        "正文：应届可报",
-        "报名截止 2026-09-01"
-      ],
-      "flags": [
-        "在招",
-        "硕士可报",
-        "专业匹配",
-        "应届"
-      ],
-      "deadline": "2026-09-01"
+      "deadline": "2026-11-30"
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
@@ -515,13 +440,15 @@
         "类别匹配：事业单位",
         "30天内发布",
         "正文提及研究生学历",
-        "正文：应届可报"
+        "正文：应届可报",
+        "报名截止 2026-12-31"
       ],
       "flags": [
         "在招",
         "硕士可报",
         "应届"
-      ]
+      ],
+      "deadline": "2026-12-31"
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
@@ -616,14 +543,14 @@
         "类别匹配：事业单位",
         "正文专业匹配：计算机/软件",
         "正文：应届可报",
-        "报名截止 2026-07-31"
+        "报名截止 2026-04-19"
       ],
       "flags": [
         "在招",
         "专业匹配",
         "应届"
       ],
-      "deadline": "2026-07-31"
+      "deadline": "2026-04-19"
     },
     {
       "id": "aHR0cHM6Ly9yc2Mu",
@@ -743,6 +670,50 @@
       ]
     },
     {
+      "id": "aHR0cDovL3d3dy54",
+      "title": "西双版纳州人力资源和社会保障局",
+      "url": "http://www.xsbn.gov.cn/xsbnzrsj/xsbnzrsj.dhtml",
+      "date": "2026-09-08",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 63,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文专业匹配：软件/农业"
+      ],
+      "flags": [
+        "专业匹配"
+      ]
+    },
+    {
+      "id": "aHR0cDovL3d3dy55",
+      "title": "云南省人民政府",
+      "url": "http://www.yn.gov.cn/",
+      "date": "2026-09-08",
+      "sourceId": "yn_rsks_news3",
+      "sourceName": "云南人事考试网 · 重要通知",
+      "org": "云南省人事考试院",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 63,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文专业匹配：电气/农业"
+      ],
+      "flags": [
+        "专业匹配"
+      ]
+    },
+    {
       "id": "aHR0cHM6Ly9yc2ou",
       "title": "楚雄州某国有企业公开招聘2026年第一批劳务派...",
       "url": "https://rsj.cxz.gov.cn/info/2216/94787.htm",
@@ -796,6 +767,31 @@
       ]
     },
     {
+      "id": "aHR0cDovL3d3dy5y",
+      "title": "人才引进与招聘",
+      "url": "http://www.rsc.ynu.edu.cn/zpqs.htm",
+      "date": "2026-09-02",
+      "sourceId": "ynu",
+      "sourceName": "云南大学",
+      "org": "云南大学",
+      "region": "昆明",
+      "category": "高校",
+      "score": 59,
+      "baseScore": 42,
+      "reasons": [
+        "云南官方发布",
+        "在招/报名信号",
+        "类别匹配：高校",
+        "无发布日期",
+        "正文专业匹配：信息技术/软件",
+        "正文：仅提及博士"
+      ],
+      "flags": [
+        "在招",
+        "专业匹配"
+      ]
+    },
+    {
       "id": "aHR0cHM6Ly9yc2ou",
       "title": "楚雄滇中物业有限公司2026年公开招聘工作人员...",
       "url": "https://rsj.cxz.gov.cn/info/2216/92987.htm",
@@ -819,6 +815,28 @@
         "硕士可报"
       ],
       "deadline": "2026-05-28"
+    },
+    {
+      "id": "aHR0cDovL3Jzai5x",
+      "title": "曲靖市人力资源和社会保障网",
+      "url": "http://rsj.qj.gov.cn/",
+      "date": "2026-09-08",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 57,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文专业匹配：机械工程"
+      ],
+      "flags": [
+        "专业匹配"
+      ]
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
@@ -866,6 +884,28 @@
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
+      "title": "旅创普洱聚英才 智汇茶咖促发展——2026“彩云英才荟”旅居人才交流与服务活动（普洱专场）举办",
+      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65768&ClassID=647",
+      "date": "2026-08-27",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 57,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文专业匹配：农业"
+      ],
+      "flags": [
+        "专业匹配"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
       "title": "云南省2026年下半年事业单位公开招聘分类考试公共科目笔试相关工作安排",
       "url": "https://hrss.yn.gov.cn/ynrsksw/i1363.html",
       "date": "2026-08-25",
@@ -889,6 +929,28 @@
       ]
     },
     {
+      "id": "aHR0cHM6Ly93d3cu",
+      "title": "红河州人力资源和社会保障网",
+      "url": "https://www.hh.gov.cn/zfxxgk/fdzdgknr/zdmsxx/wgjy.htm",
+      "date": "2026-08-24",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 57,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文专业匹配：农业"
+      ],
+      "flags": [
+        "专业匹配"
+      ]
+    },
+    {
       "id": "aHR0cHM6Ly9ocnNz",
       "title": "2026年上半年西南林业大学公开招聘硕士拟聘用人员公示（第二批）",
       "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65850&ClassID=602",
@@ -907,6 +969,33 @@
         "类别匹配：高校",
         "公示类（非在招）",
         "30天内发布",
+        "正文提及研究生学历"
+      ],
+      "flags": [
+        "在招",
+        "硕士可报",
+        "公示"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
+      "title": "2026年上半年西南林业大学公开招聘硕士拟聘用...",
+      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65850&ClassID=602",
+      "date": "2026-08-27",
+      "sourceId": "swfu_rsc",
+      "sourceName": "西南林业大学人事处",
+      "org": "西南林业大学人事处",
+      "region": "昆明",
+      "category": "高校",
+      "score": 56,
+      "baseScore": 37,
+      "reasons": [
+        "云南官方发布",
+        "在招/报名信号",
+        "硕士/研究生可报",
+        "类别匹配：高校",
+        "公示类（非在招）",
+        "无发布日期",
         "正文提及研究生学历"
       ],
       "flags": [
@@ -964,6 +1053,32 @@
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
+      "title": "云南中医药大学第二附属医院2026年校园招聘拟聘用人员名单公示",
+      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65911&ClassID=602",
+      "date": "2026-09-08",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "高校",
+      "score": 53,
+      "baseScore": 38,
+      "reasons": [
+        "云南本地岗位",
+        "在招/报名信号",
+        "应届/校招",
+        "类别匹配：高校",
+        "公示类（非在招）",
+        "30天内发布"
+      ],
+      "flags": [
+        "在招",
+        "应届",
+        "公示"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
       "title": "昆明医科大学第一附属医院2026年校园招聘拟聘用人员公示（第五批）",
       "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65871&ClassID=602",
       "date": "2026-09-04",
@@ -986,6 +1101,50 @@
         "在招",
         "应届",
         "公示"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
+      "title": "云南技师学院（云南高级技工学校）2025年度部门决算",
+      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65863&ClassID=558",
+      "date": "2026-09-03",
+      "sourceId": "yn_hrss_558",
+      "sourceName": "云南省人社厅 · 通知公告",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "高校",
+      "score": 53,
+      "baseScore": 32,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：高校",
+        "30天内发布",
+        "正文专业匹配：信息技术"
+      ],
+      "flags": [
+        "专业匹配"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
+      "title": "云南工贸职业技术学院2025年度部门决算",
+      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65862&ClassID=558",
+      "date": "2026-09-03",
+      "sourceId": "yn_hrss_558",
+      "sourceName": "云南省人社厅 · 通知公告",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "高校",
+      "score": 53,
+      "baseScore": 32,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：高校",
+        "30天内发布",
+        "正文专业匹配：信息技术"
+      ],
+      "flags": [
+        "专业匹配"
       ]
     },
     {
@@ -1390,6 +1549,30 @@
       ]
     },
     {
+      "id": "aHR0cHM6Ly9ocnNz",
+      "title": "云南中医药大学第二附属医院2026年面向社会公开招聘工作人员拟聘用人员名单公示",
+      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65910&ClassID=602",
+      "date": "2026-09-08",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 49,
+      "baseScore": 34,
+      "reasons": [
+        "云南本地岗位",
+        "在招/报名信号",
+        "类别匹配：事业单位",
+        "公示类（非在招）",
+        "30天内发布"
+      ],
+      "flags": [
+        "在招",
+        "公示"
+      ]
+    },
+    {
       "id": "aHR0cHM6Ly9yc2ou",
       "title": "· 昆明市安宁市2026年事业单位公开招聘工作人员拟聘人员公示（三）",
       "url": "https://rsj.km.gov.cn/c/2026-09-08/5110210.shtml",
@@ -1460,44 +1643,6 @@
         "在招",
         "公示"
       ]
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "云南技师学院（云南高级技工学校）2025年度部门决算",
-      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65863&ClassID=558",
-      "date": "2026-09-03",
-      "sourceId": "yn_hrss_558",
-      "sourceName": "云南省人社厅 · 通知公告",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "高校",
-      "score": 47,
-      "baseScore": 32,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：高校",
-        "30天内发布"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "云南工贸职业技术学院2025年度部门决算",
-      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65862&ClassID=558",
-      "date": "2026-09-03",
-      "sourceId": "yn_hrss_558",
-      "sourceName": "云南省人社厅 · 通知公告",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "高校",
-      "score": 47,
-      "baseScore": 32,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：高校",
-        "30天内发布"
-      ],
-      "flags": []
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
@@ -1734,7 +1879,7 @@
       "id": "aHR0cHM6Ly9yc2ou",
       "title": "楚雄滇中物业有限公司2025年社会招聘公告",
       "url": "https://rsj.cxz.gov.cn/info/2216/94797.htm",
-      "date": "",
+      "date": "2025-09-18",
       "sourceId": "cx_rsj",
       "sourceName": "楚雄州人力资源和社会保障局",
       "org": "楚雄州人社局",
@@ -1821,6 +1966,33 @@
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
+      "title": "云南省面向选定高校招录2022年定向选调生面试公告",
+      "url": "https://hrss.yn.gov.cn/ynrsksw/i959.html",
+      "date": "2022-02-10",
+      "sourceId": "yn_rsks_sp7",
+      "sourceName": "云南人事考试网 · 公务员考试",
+      "org": "云南省人事考试院",
+      "region": "云南",
+      "category": "选调生",
+      "score": 40,
+      "baseScore": 64,
+      "reasons": [
+        "云南本地岗位",
+        "在招/报名信号",
+        "应届/校招",
+        "类别匹配：选调生",
+        "一年以上（可能已过期）",
+        "正文专业匹配：大数据"
+      ],
+      "flags": [
+        "在招",
+        "应届",
+        "已过期",
+        "专业匹配"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
       "title": "云南省传染病医院2026年校园招聘拟聘用人员公示",
       "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65889&ClassID=602",
       "date": "2026-09-07",
@@ -1860,11 +2032,13 @@
         "云南本地岗位",
         "在招/报名信号",
         "类别匹配：国企",
-        "半年以上"
+        "半年以上",
+        "报名截止 2026-03-03"
       ],
       "flags": [
         "在招"
-      ]
+      ],
+      "deadline": "2026-03-03"
     },
     {
       "id": "aHR0cHM6Ly9yc2ou",
@@ -1882,11 +2056,13 @@
         "云南本地岗位",
         "在招/报名信号",
         "类别匹配：国企",
-        "半年以上"
+        "半年以上",
+        "报名截止 2025-09-22"
       ],
       "flags": [
         "在招"
-      ]
+      ],
+      "deadline": "2025-09-22"
     },
     {
       "id": "aHR0cHM6Ly9yc2ou",
@@ -1905,6 +2081,28 @@
         "在招/报名信号",
         "类别匹配：国企",
         "半年以上"
+      ],
+      "flags": [
+        "在招"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
+      "title": "西南林业大学关于2026年面向社会公开招聘拟聘...",
+      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65400&ClassID=602",
+      "date": "2026-08-27",
+      "sourceId": "swfu_rsc",
+      "sourceName": "西南林业大学人事处",
+      "org": "西南林业大学人事处",
+      "region": "昆明",
+      "category": "高校",
+      "score": 37,
+      "baseScore": 42,
+      "reasons": [
+        "云南官方发布",
+        "在招/报名信号",
+        "类别匹配：高校",
+        "无发布日期"
       ],
       "flags": [
         "在招"
@@ -1935,92 +2133,46 @@
       ]
     },
     {
-      "id": "aHR0cHM6Ly9yc2Mu",
-      "title": "高层次人才引进",
-      "url": "https://rsc.ynau.edu.cn/subMenu.asp?lm=13",
+      "id": "aHR0cDovL3d3dy5i",
+      "title": "保山市人力资源和社会保障网",
+      "url": "http://www.baoshan.gov.cn/bmym/bssrsj1/zfxxgkpt/zfxxgkzn.htm",
       "date": "",
-      "sourceId": "ynau_rsc",
-      "sourceName": "云南农业大学人事处（母校）",
-      "org": "云南农业大学人事处",
-      "region": "昆明",
-      "category": "高校",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
       "score": 37,
-      "baseScore": 42,
+      "baseScore": 36,
       "reasons": [
-        "云南官方发布",
-        "在招/报名信号",
-        "类别匹配：高校",
-        "无发布日期"
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文专业匹配：农业"
       ],
       "flags": [
-        "在招"
+        "专业匹配"
       ]
     },
     {
-      "id": "aHR0cHM6Ly9yc2Mu",
-      "title": "编制外人员招聘",
-      "url": "https://rsc.ynau.edu.cn/subMenu.asp?lm=90",
+      "id": "aHR0cDovL3d3dy5u",
+      "title": "怒江州人力资源和社会保障局",
+      "url": "http://www.nujiang.gov.cn/rsj/fzrjl.html",
       "date": "",
-      "sourceId": "ynau_rsc",
-      "sourceName": "云南农业大学人事处（母校）",
-      "org": "云南农业大学人事处",
-      "region": "昆明",
-      "category": "高校",
-      "score": 37,
-      "baseScore": 42,
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 36,
+      "baseScore": 36,
       "reasons": [
-        "云南官方发布",
-        "在招/报名信号",
-        "类别匹配：高校",
-        "无发布日期"
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文：党员相关"
       ],
-      "flags": [
-        "在招"
-      ]
-    },
-    {
-      "id": "aHR0cDovL3d3dy5y",
-      "title": "人才引进与招聘",
-      "url": "http://www.rsc.ynu.edu.cn/zpqs.htm",
-      "date": "",
-      "sourceId": "ynu",
-      "sourceName": "云南大学",
-      "org": "云南大学",
-      "region": "昆明",
-      "category": "高校",
-      "score": 37,
-      "baseScore": 42,
-      "reasons": [
-        "云南官方发布",
-        "在招/报名信号",
-        "类别匹配：高校",
-        "无发布日期"
-      ],
-      "flags": [
-        "在招"
-      ]
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "西南林业大学关于2026年面向社会公开招聘拟聘...",
-      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65400&ClassID=602",
-      "date": "",
-      "sourceId": "swfu_rsc",
-      "sourceName": "西南林业大学人事处",
-      "org": "西南林业大学人事处",
-      "region": "昆明",
-      "category": "高校",
-      "score": 37,
-      "baseScore": 42,
-      "reasons": [
-        "云南官方发布",
-        "在招/报名信号",
-        "类别匹配：高校",
-        "无发布日期"
-      ],
-      "flags": [
-        "在招"
-      ]
+      "flags": []
     },
     {
       "id": "aHR0cHM6Ly9yc2ou",
@@ -2124,31 +2276,6 @@
       ]
     },
     {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "云南省面向选定高校招录2022年定向选调生面试公告",
-      "url": "https://hrss.yn.gov.cn/ynrsksw/i959.html",
-      "date": "2022-02-10",
-      "sourceId": "yn_rsks_sp7",
-      "sourceName": "云南人事考试网 · 公务员考试",
-      "org": "云南省人事考试院",
-      "region": "云南",
-      "category": "选调生",
-      "score": 34,
-      "baseScore": 64,
-      "reasons": [
-        "云南本地岗位",
-        "在招/报名信号",
-        "应届/校招",
-        "类别匹配：选调生",
-        "一年以上（可能已过期）"
-      ],
-      "flags": [
-        "在招",
-        "应届",
-        "已过期"
-      ]
-    },
-    {
       "id": "aHR0cDovL3d3dy5r",
       "title": "中国科学院昆明植物研究所关于启动助理研究员岗位公开招聘第一批次资格审...",
       "url": "http://www.kib.cas.cn/tzgg/202608/t20260824_8264932.html",
@@ -2220,13 +2347,15 @@
         "类别匹配：科研院所",
         "无发布日期",
         "正文提及研究生学历",
-        "正文专业匹配：生物"
+        "正文专业匹配：生物",
+        "报名截止 2027-08-14"
       ],
       "flags": [
         "在招",
         "硕士可报",
         "专业匹配"
-      ]
+      ],
+      "deadline": "2027-08-14"
     },
     {
       "id": "aHR0cHM6Ly9yc2ou",
@@ -2280,31 +2409,6 @@
     },
     {
       "id": "aHR0cHM6Ly9yc2Mu",
-      "title": "云南农业大学高层次人才引进信息",
-      "url": "https://rsc.ynau.edu.cn/View.asp?id=1025",
-      "date": "2025-06-24",
-      "sourceId": "ynau_rsc",
-      "sourceName": "云南农业大学人事处（母校）",
-      "org": "云南农业大学人事处",
-      "region": "昆明",
-      "category": "高校",
-      "score": 32,
-      "baseScore": 62,
-      "reasons": [
-        "云南本地岗位",
-        "在招/报名信号",
-        "专业相关：农业",
-        "类别匹配：高校",
-        "一年以上（可能已过期）"
-      ],
-      "flags": [
-        "在招",
-        "专业匹配",
-        "已过期"
-      ]
-    },
-    {
-      "id": "aHR0cHM6Ly9yc2Mu",
       "title": "云南农业大学2025年第三批公开招聘编制外人员的公告",
       "url": "https://rsc.ynau.edu.cn/View.asp?id=1023",
       "date": "2025-06-12",
@@ -2329,36 +2433,67 @@
       ]
     },
     {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "2026年上半年西南林业大学公开招聘硕士拟聘用...",
-      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65850&ClassID=602",
-      "date": "",
-      "sourceId": "swfu_rsc",
-      "sourceName": "西南林业大学人事处",
-      "org": "西南林业大学人事处",
-      "region": "昆明",
-      "category": "高校",
-      "score": 32,
-      "baseScore": 37,
+      "id": "aHR0cDovL3Jzai5j",
+      "title": "楚雄州人力资源和社会保障网",
+      "url": "http://rsj.cxz.gov.cn/",
+      "date": "2026-09-08",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 31,
+      "baseScore": 36,
       "reasons": [
-        "云南官方发布",
-        "在招/报名信号",
-        "硕士/研究生可报",
-        "类别匹配：高校",
-        "公示类（非在招）",
+        "云南本地岗位",
+        "类别匹配：事业单位",
         "无发布日期"
       ],
-      "flags": [
-        "在招",
-        "硕士可报",
-        "公示"
-      ]
+      "flags": []
+    },
+    {
+      "id": "aHR0cDovL2xqaHJz",
+      "title": "丽江人力资源和社会保障局",
+      "url": "http://ljhrss.lijiang.gov.cn/",
+      "date": "2026-09-02",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 31,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期"
+      ],
+      "flags": []
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
+      "title": "以文兴业聚英才 旅居共生启新篇——“彩云英才荟”旅居人才交流与服务红河活动举办",
+      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65766&ClassID=647",
+      "date": "2026-08-27",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 31,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期"
+      ],
+      "flags": []
     },
     {
       "id": "aHR0cDovL3Jzai5r",
       "title": "昆明市人力资源和社会保障网",
       "url": "http://rsj.km.gov.cn/",
-      "date": "",
+      "date": "2026-08-24",
       "sourceId": "yn_hrss_458",
       "sourceName": "云南省人社厅 · 招考招聘",
       "org": "云南省人力资源和社会保障厅",
@@ -2377,25 +2512,6 @@
       "id": "aHR0cDovL3d3dy55",
       "title": "玉溪市人力资源和社会保障网",
       "url": "http://www.yuxi.gov.cn/yxgovfront/newShowContentPage.jspx?path=yxszfxxgk&channelId=15307&topChannelId=15307",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cDovL3Jzai5j",
-      "title": "楚雄州人力资源和社会保障网",
-      "url": "http://rsj.cxz.gov.cn/",
       "date": "",
       "sourceId": "yn_hrss_458",
       "sourceName": "云南省人社厅 · 招考招聘",
@@ -2469,104 +2585,9 @@
       "flags": []
     },
     {
-      "id": "aHR0cDovL3d3dy5u",
-      "title": "怒江州人力资源和社会保障局",
-      "url": "http://www.nujiang.gov.cn/rsj/fzrjl.html",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cHM6Ly93d3cu",
-      "title": "红河州人力资源和社会保障网",
-      "url": "https://www.hh.gov.cn/zfxxgk/fdzdgknr/zdmsxx/wgjy.htm",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cDovL2RxenJz",
-      "title": "迪庆州人力资源和社会保障局",
-      "url": "http://dqzrsj.diqing.gov.cn/",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
       "id": "aHR0cHM6Ly93d3cu",
       "title": "临沧市人力资源和社会保障网",
       "url": "https://www.lincang.gov.cn/zfxxgk_lcs_rsbzj/gzdt.html",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cDovL3d3dy54",
-      "title": "西双版纳州人力资源和社会保障局",
-      "url": "http://www.xsbn.gov.cn/xsbnzrsj/xsbnzrsj.dhtml",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cDovL2xqaHJz",
-      "title": "丽江人力资源和社会保障局",
-      "url": "http://ljhrss.lijiang.gov.cn/",
       "date": "",
       "sourceId": "yn_hrss_458",
       "sourceName": "云南省人社厅 · 招考招聘",
@@ -2602,44 +2623,6 @@
       "flags": []
     },
     {
-      "id": "aHR0cDovL3Jzai5x",
-      "title": "曲靖市人力资源和社会保障网",
-      "url": "http://rsj.qj.gov.cn/",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cDovL3d3dy5i",
-      "title": "保山市人力资源和社会保障网",
-      "url": "http://www.baoshan.gov.cn/bmym/bssrsj1/zfxxgkpt/zfxxgkzn.htm",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
       "id": "aHR0cHM6Ly93d3cu",
       "title": "大理州人力资源和社会保障局",
       "url": "https://www.dali.gov.cn/dlzrmzf/",
@@ -2647,63 +2630,6 @@
       "sourceId": "yn_hrss_458",
       "sourceName": "云南省人社厅 · 招考招聘",
       "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "旅创普洱聚英才 智汇茶咖促发展——2026“彩云英才荟”旅居人才交流与服务活动（普洱专场）举办",
-      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65768&ClassID=647",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "以文兴业聚英才 旅居共生启新篇——“彩云英才荟”旅居人才交流与服务红河活动举办",
-      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65766&ClassID=647",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
-      "id": "aHR0cDovL3d3dy55",
-      "title": "云南省人民政府",
-      "url": "http://www.yn.gov.cn/",
-      "date": "",
-      "sourceId": "yn_rsks_news3",
-      "sourceName": "云南人事考试网 · 重要通知",
-      "org": "云南省人事考试院",
       "region": "云南",
       "category": "事业单位",
       "score": 31,
@@ -2756,6 +2682,58 @@
         "类别匹配：事业单位"
       ],
       "flags": []
+    },
+    {
+      "id": "aHR0cHM6Ly9yc2Mu",
+      "title": "云南农业大学高层次人才引进信息",
+      "url": "https://rsc.ynau.edu.cn/View.asp?id=1025",
+      "date": "2025-06-24",
+      "sourceId": "ynau_rsc",
+      "sourceName": "云南农业大学人事处（母校）",
+      "org": "云南农业大学人事处",
+      "region": "昆明",
+      "category": "高校",
+      "score": 28,
+      "baseScore": 62,
+      "reasons": [
+        "云南本地岗位",
+        "在招/报名信号",
+        "专业相关：农业",
+        "类别匹配：高校",
+        "一年以上（可能已过期）",
+        "正文专业匹配：农业",
+        "正文：仅提及博士"
+      ],
+      "flags": [
+        "在招",
+        "专业匹配",
+        "已过期"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9yc2Mu",
+      "title": "编制外人员招聘",
+      "url": "https://rsc.ynau.edu.cn/subMenu.asp?lm=90",
+      "date": "2025-09-10",
+      "sourceId": "ynau_rsc",
+      "sourceName": "云南农业大学人事处（母校）",
+      "org": "云南农业大学人事处",
+      "region": "昆明",
+      "category": "高校",
+      "score": 26,
+      "baseScore": 42,
+      "reasons": [
+        "云南官方发布",
+        "在招/报名信号",
+        "类别匹配：高校",
+        "无发布日期",
+        "正文专业匹配：农业",
+        "正文：仅提及博士"
+      ],
+      "flags": [
+        "在招",
+        "专业匹配"
+      ]
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
@@ -3210,6 +3188,55 @@
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
+      "title": "滇西科技师范学院2026年公开招聘博士拟聘用人员公示（第一批）",
+      "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65913&ClassID=602",
+      "date": "2026-09-08",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "高校",
+      "score": 15,
+      "baseScore": 0,
+      "reasons": [
+        "云南官方发布",
+        "在招/报名信号",
+        "类别匹配：高校",
+        "公示类（非在招）",
+        "可能不符：博士",
+        "30天内发布"
+      ],
+      "flags": [
+        "在招",
+        "公示"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
+      "title": "2026年度社会工作者职业资格考试云南考区拟取得单独划线地区资格证书人员使用告知承诺制情况的公示",
+      "url": "https://hrss.yn.gov.cn/ynrsksw/i1365.html",
+      "date": "2026-09-08",
+      "sourceId": "yn_rsks_news3",
+      "sourceName": "云南人事考试网 · 重要通知",
+      "org": "云南省人事考试院",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 15,
+      "baseScore": 0,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "考务/成绩信息，非招聘机会",
+        "公示类（非在招）",
+        "30天内发布"
+      ],
+      "flags": [
+        "考务流程",
+        "公示"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
       "title": "西南林业大学2026年博士公开招聘拟聘用人员公示（第五批）",
       "url": "https://hrss.yn.gov.cn/NewsView.aspx?NewsID=65849&ClassID=602",
       "date": "2026-09-03",
@@ -3621,6 +3648,28 @@
         "在招",
         "考务安排",
         "已过期"
+      ]
+    },
+    {
+      "id": "aHR0cDovL2RxenJz",
+      "title": "迪庆州人力资源和社会保障局",
+      "url": "http://dqzrsj.diqing.gov.cn/",
+      "date": "2023-11-06",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 12,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文专业匹配：农业"
+      ],
+      "flags": [
+        "专业匹配"
       ]
     },
     {
@@ -4099,6 +4148,31 @@
       ],
       "flags": [
         "考务流程"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9yc2Mu",
+      "title": "高层次人才引进",
+      "url": "https://rsc.ynau.edu.cn/subMenu.asp?lm=13",
+      "date": "2025-06-24",
+      "sourceId": "ynau_rsc",
+      "sourceName": "云南农业大学人事处（母校）",
+      "org": "云南农业大学人事处",
+      "region": "昆明",
+      "category": "高校",
+      "score": 8,
+      "baseScore": 42,
+      "reasons": [
+        "云南官方发布",
+        "在招/报名信号",
+        "类别匹配：高校",
+        "无发布日期",
+        "正文专业匹配：农业",
+        "正文：仅提及博士"
+      ],
+      "flags": [
+        "在招",
+        "专业匹配"
       ]
     },
     {
@@ -4956,28 +5030,6 @@
       "flags": [
         "考务流程",
         "公示"
-      ]
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "关于证书领取的温馨提示",
-      "url": "https://hrss.yn.gov.cn/ynrsksw/i1300.html",
-      "date": "2025-11-07",
-      "sourceId": "yn_rsks_news3",
-      "sourceName": "云南人事考试网 · 重要通知",
-      "org": "云南省人事考试院",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 0,
-      "baseScore": 0,
-      "reasons": [
-        "云南官方发布",
-        "类别匹配：事业单位",
-        "考务/成绩信息，非招聘机会",
-        "半年以上"
-      ],
-      "flags": [
-        "考务流程"
       ]
     },
     {
