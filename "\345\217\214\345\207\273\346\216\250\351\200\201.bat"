@@ -1,0 +1,47 @@
+@echo off
+chcp 65001 >nul 2>&1
+cd /d "%~dp0"
+
+echo.
+echo ============================================
+echo    云南公考编招平台 - 一键推送到 GitHub
+echo ============================================
+echo.
+echo  目标仓库:  https://github.com/ZZhengqian/yunnan-jobs
+echo  本地已有 5 次提交待推送。
+echo.
+echo  正在推送...
+echo  如果弹出 GitHub 登录窗口，请用浏览器点 "Authorize" 授权。
+echo.
+
+git push -u origin main
+if errorlevel 1 (
+  echo.
+  echo  推送未完成。常见原因:
+  echo    1. 登录窗口被取消或没完成授权
+  echo    2. 浏览器授权后没回到本窗口
+  echo    3. 网络暂时不通
+  echo.
+  echo  请重新双击本脚本再试一次。
+  echo.
+  pause
+  exit /b 1
+)
+
+echo.
+echo  推送成功！
+echo.
+echo  接下来只需两步:
+echo.
+echo  1. 已为你打开仓库的 Pages 设置页
+echo     把 Source 选成 "GitHub Actions"
+echo.
+echo  2. 打开 Actions 页面，手动点一次 "Run workflow"
+echo     跑完后会得到公网网址
+echo.
+echo  你的网址:  https://ZZhengqian.github.io/yunnan-jobs/
+echo  之后每天 08:00 和 20:00 自动更新。
+echo.
+start https://github.com/ZZhengqian/yunnan-jobs/settings/pages
+start https://github.com/ZZhengqian/yunnan-jobs/actions
+pause

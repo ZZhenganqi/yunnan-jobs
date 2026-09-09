@@ -118,8 +118,8 @@ export const profile = {
 ### 方案 A：GitHub Actions（推荐，免费且自动托管）
 
 1. 在 GitHub 新建空仓库（不要勾选 README / .gitignore）
-3. **双击 `部署到GitHub.bat`**，输入 GitHub 用户名和仓库名，脚本会自动完成
-   关联远端、切分支、推送，不用手敲 git 命令
+3. **双击 `双击推送.bat`**，脚本会自动完成 git push。推送成功后会自动打开
+   仓库的 Pages 设置页和 Actions 页
 
    （想手动执行也可以：）
 
