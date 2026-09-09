@@ -1,7 +1,8 @@
 // 轻量 HTTP 工具：零第三方依赖，自带重试 / 超时 / 编码识别（GBK/UTF-8）
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
 
-export async function get(url, { timeout = 30000, retries = 3, headers = {} } = {}) {
+// 默认放宽超时：CI（GitHub Actions 在海外）访问国内政府站点明显更慢
+export async function get(url, { timeout = 45000, retries = 4, headers = {} } = {}) {
   let lastErr;
   for (let i = 0; i < retries; i++) {
     const ctl = new AbortController();

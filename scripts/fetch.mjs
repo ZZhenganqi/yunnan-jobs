@@ -330,6 +330,29 @@ async function run() {
     for (const j of jobs) if (!prev.has(j.id)) { j.isNew = true; newCount++; }
   }
 
+  // 合并上次结果：CI（GitHub Actions 在海外）访问国内政府站点时部分源会失败，
+  // 直接覆盖会让已抓到的岗位凭空消失。这里保留上次抓取中本次未刷新的岗位。
+  let retained = 0;
+  if (fs.existsSync(OUT)) {
+    try {
+      const prevJobs = (JSON.parse(fs.readFileSync(OUT, 'utf8')).jobs) || [];
+      const curIds = new Set(jobs.map((j) => j.id));
+      const curUrls = new Set(jobs.map((j) => j.url));
+      const CUTOFF_DAYS = 90;
+      const now = Date.now();
+      for (const p of prevJobs) {
+        if (curIds.has(p.id) || curUrls.has(p.url)) continue;
+        const age = p.date ? (now - new Date(p.date).getTime()) / 86400000 : 999;
+        if (age > CUTOFF_DAYS) continue;
+        p.retained = true; // 本次未刷新，沿用上次结果
+        delete p.isNew;
+        jobs.push(p);
+        retained++;
+      }
+    } catch { /* 旧数据损坏则忽略，按本次结果输出 */ }
+  }
+  if (retained) console.log(`合并上次结果：保留 ${retained} 条本次未刷新到的岗位`);
+
   jobs.sort((a, b) => (b.score - a.score) || (b.date.localeCompare(a.date)));
 
   const payload = {
@@ -339,6 +362,7 @@ async function run() {
       total: jobs.length,
       newCount,
       firstRun,
+      retainedCount: retained,
       deadlineCount: jobs.filter(j => j.deadline).length,
       profile: { school: profile.school, major: profile.major, degree: profile.degree, politics: profile.politics },
       sources: sourceStatus,

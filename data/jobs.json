@@ -1,10 +1,11 @@
 {
   "meta": {
-    "updatedAt": "2026-09-08T10:50:09.923Z",
-    "updatedAtLocal": "2026/9/8 18:50:09",
-    "total": 249,
+    "updatedAt": "2026-09-09T02:09:44.702Z",
+    "updatedAtLocal": "2026/9/9 10:09:44",
+    "total": 250,
     "newCount": 0,
     "firstRun": false,
+    "retainedCount": 0,
     "deadlineCount": 19,
     "profile": {
       "school": "云南农业大学",
@@ -87,7 +88,7 @@
         "id": "km_rsj",
         "name": "昆明市人力资源和社会保障局",
         "ok": true,
-        "count": 4,
+        "count": 5,
         "url": "https://rsj.km.gov.cn/"
       },
       {
@@ -670,6 +671,28 @@
       ]
     },
     {
+      "id": "aHR0cDovL3d3dy55",
+      "title": "云南省人民政府",
+      "url": "http://www.yn.gov.cn/",
+      "date": "2026-09-09",
+      "sourceId": "yn_rsks_news3",
+      "sourceName": "云南人事考试网 · 重要通知",
+      "org": "云南省人事考试院",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 63,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文专业匹配：电气/农业"
+      ],
+      "flags": [
+        "专业匹配"
+      ]
+    },
+    {
       "id": "aHR0cDovL3d3dy54",
       "title": "西双版纳州人力资源和社会保障局",
       "url": "http://www.xsbn.gov.cn/xsbnzrsj/xsbnzrsj.dhtml",
@@ -686,28 +709,6 @@
         "类别匹配：事业单位",
         "无发布日期",
         "正文专业匹配：软件/农业"
-      ],
-      "flags": [
-        "专业匹配"
-      ]
-    },
-    {
-      "id": "aHR0cDovL3d3dy55",
-      "title": "云南省人民政府",
-      "url": "http://www.yn.gov.cn/",
-      "date": "2026-09-08",
-      "sourceId": "yn_rsks_news3",
-      "sourceName": "云南人事考试网 · 重要通知",
-      "org": "云南省人事考试院",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 63,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期",
-        "正文专业匹配：电气/农业"
       ],
       "flags": [
         "专业匹配"
@@ -1965,6 +1966,26 @@
       ]
     },
     {
+      "id": "aHR0cDovL3Jzai5r",
+      "title": "昆明市人力资源和社会保障网",
+      "url": "http://rsj.km.gov.cn/",
+      "date": "2026-08-24",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 41,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期",
+        "正文：仅提及博士"
+      ],
+      "flags": []
+    },
+    {
       "id": "aHR0cHM6Ly9ocnNz",
       "title": "云南省面向选定高校招录2022年定向选调生面试公告",
       "url": "https://hrss.yn.gov.cn/ynrsksw/i959.html",
@@ -2153,26 +2174,6 @@
       "flags": [
         "专业匹配"
       ]
-    },
-    {
-      "id": "aHR0cDovL3d3dy5u",
-      "title": "怒江州人力资源和社会保障局",
-      "url": "http://www.nujiang.gov.cn/rsj/fzrjl.html",
-      "date": "",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 36,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期",
-        "正文：党员相关"
-      ],
-      "flags": []
     },
     {
       "id": "aHR0cHM6Ly9yc2ou",
@@ -2490,25 +2491,6 @@
       "flags": []
     },
     {
-      "id": "aHR0cDovL3Jzai5r",
-      "title": "昆明市人力资源和社会保障网",
-      "url": "http://rsj.km.gov.cn/",
-      "date": "2026-08-24",
-      "sourceId": "yn_hrss_458",
-      "sourceName": "云南省人社厅 · 招考招聘",
-      "org": "云南省人力资源和社会保障厅",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 31,
-      "baseScore": 36,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "无发布日期"
-      ],
-      "flags": []
-    },
-    {
       "id": "aHR0cDovL3d3dy55",
       "title": "玉溪市人力资源和社会保障网",
       "url": "http://www.yuxi.gov.cn/yxgovfront/newShowContentPage.jspx?path=yxszfxxgk&channelId=15307&topChannelId=15307",
@@ -2569,6 +2551,25 @@
       "id": "aHR0cDovL3d3dy5k",
       "title": "德宏州人力资源和社会保障网",
       "url": "http://www.dh.gov.cn/rsj/",
+      "date": "",
+      "sourceId": "yn_hrss_458",
+      "sourceName": "云南省人社厅 · 招考招聘",
+      "org": "云南省人力资源和社会保障厅",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 31,
+      "baseScore": 36,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "无发布日期"
+      ],
+      "flags": []
+    },
+    {
+      "id": "aHR0cDovL3d3dy5u",
+      "title": "怒江州人力资源和社会保障局",
+      "url": "http://www.nujiang.gov.cn/rsj/fzrjl.html",
       "date": "",
       "sourceId": "yn_hrss_458",
       "sourceName": "云南省人社厅 · 招考招聘",
@@ -2664,24 +2665,6 @@
         "在招",
         "考务安排"
       ]
-    },
-    {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "关于领取2025年度环境影响评价工程师等16项职业资格考试证书（成绩合格证明）的通知",
-      "url": "https://hrss.yn.gov.cn/ynrsksw/i1333.html",
-      "date": "2026-03-13",
-      "sourceId": "yn_rsks_news3",
-      "sourceName": "云南人事考试网 · 重要通知",
-      "org": "云南省人事考试院",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 28,
-      "baseScore": 28,
-      "reasons": [
-        "云南官方发布",
-        "类别匹配：事业单位"
-      ],
-      "flags": []
     },
     {
       "id": "aHR0cHM6Ly9yc2Mu",
@@ -3146,6 +3129,31 @@
       "flags": []
     },
     {
+      "id": "aHR0cHM6Ly9yc2ou",
+      "title": "· 昆明学院2026年公开招聘博士工作人员拟聘人员公示（四）",
+      "url": "https://rsj.km.gov.cn/c/2026-09-09/5110483.shtml",
+      "date": "2026-09-09",
+      "sourceId": "km_rsj",
+      "sourceName": "昆明市人力资源和社会保障局",
+      "org": "昆明市人社局",
+      "region": "昆明",
+      "category": "高校",
+      "score": 20,
+      "baseScore": 5,
+      "reasons": [
+        "云南本地岗位",
+        "在招/报名信号",
+        "类别匹配：高校",
+        "公示类（非在招）",
+        "可能不符：博士",
+        "30天内发布"
+      ],
+      "flags": [
+        "在招",
+        "公示"
+      ]
+    },
+    {
       "id": "aHR0cHM6Ly9yc2Mu",
       "title": "2026年云南师范大学拟聘用人员公示（四）",
       "url": "https://rsc.ynnu.edu.cn/info/1012/1747.htm",
@@ -3183,6 +3191,25 @@
         "云南官方发布",
         "类别匹配：高校",
         "无发布日期"
+      ],
+      "flags": []
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
+      "title": "关于领取2025年度环境影响评价工程师等16项职业资格考试证书（成绩合格证明）的通知",
+      "url": "https://hrss.yn.gov.cn/ynrsksw/i1333.html",
+      "date": "2026-03-13",
+      "sourceId": "yn_rsks_news3",
+      "sourceName": "云南人事考试网 · 重要通知",
+      "org": "云南省人事考试院",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 16,
+      "baseScore": 28,
+      "reasons": [
+        "云南官方发布",
+        "类别匹配：事业单位",
+        "半年以上"
       ],
       "flags": []
     },
@@ -4129,28 +4156,6 @@
       ]
     },
     {
-      "id": "aHR0cHM6Ly9ocnNz",
-      "title": "2026年度设备监理师职业资格考试云南考区公告",
-      "url": "https://hrss.yn.gov.cn/ynrsksw/i1346.html",
-      "date": "2026-06-11",
-      "sourceId": "yn_rsks_news2",
-      "sourceName": "云南人事考试网 · 工作动态",
-      "org": "云南省人事考试院",
-      "region": "云南",
-      "category": "事业单位",
-      "score": 8,
-      "baseScore": 0,
-      "reasons": [
-        "云南本地岗位",
-        "类别匹配：事业单位",
-        "考务/成绩信息，非招聘机会",
-        "90天内发布"
-      ],
-      "flags": [
-        "考务流程"
-      ]
-    },
-    {
       "id": "aHR0cHM6Ly9yc2Mu",
       "title": "高层次人才引进",
       "url": "https://rsc.ynau.edu.cn/subMenu.asp?lm=13",
@@ -4364,6 +4369,27 @@
     },
     {
       "id": "aHR0cHM6Ly9ocnNz",
+      "title": "2026年度设备监理师职业资格考试云南考区公告",
+      "url": "https://hrss.yn.gov.cn/ynrsksw/i1346.html",
+      "date": "2026-06-11",
+      "sourceId": "yn_rsks_news2",
+      "sourceName": "云南人事考试网 · 工作动态",
+      "org": "云南省人事考试院",
+      "region": "云南",
+      "category": "事业单位",
+      "score": 0,
+      "baseScore": 0,
+      "reasons": [
+        "云南本地岗位",
+        "类别匹配：事业单位",
+        "考务/成绩信息，非招聘机会"
+      ],
+      "flags": [
+        "考务流程"
+      ]
+    },
+    {
+      "id": "aHR0cHM6Ly9ocnNz",
       "title": "2026年度注册城乡规划师职业资格考试云南考区公告",
       "url": "https://hrss.yn.gov.cn/ynrsksw/i1342.html",
       "date": "2026-05-27",
@@ -4503,7 +4529,8 @@
       "reasons": [
         "云南本地岗位",
         "类别匹配：事业单位",
-        "考务/成绩信息，非招聘机会"
+        "考务/成绩信息，非招聘机会",
+        "半年以上"
       ],
       "flags": [
         "考务流程"
@@ -4524,7 +4551,8 @@
       "reasons": [
         "云南本地岗位",
         "类别匹配：事业单位",
-        "考务/成绩信息，非招聘机会"
+        "考务/成绩信息，非招聘机会",
+        "半年以上"
       ],
       "flags": [
         "考务流程"

@@ -206,7 +206,19 @@ async function pushCommits() {
 async function enablePages() {
   try {
     const cur = await gh('GET', '/pages');
-    log(`  Pages 已启用: ${cur.html_url || cur.status || 'ok'}`);
+    // 已启用：若此前是 legacy 模式且这次有 workflow 权限，切换为 Actions 模式
+    if (!SKIPPED_WORKFLOW && cur.build_type !== 'workflow') {
+      try {
+        const r = await gh('PUT', '/pages', { build_type: 'workflow' });
+        log('  Pages 已切换为 GitHub Actions 模式');
+        log(`  ${r.html_url || cur.html_url}`);
+        return r;
+      } catch (e) {
+        log(`  切换 Actions 模式失败，保持现有模式: ${e.message}`);
+        return cur;
+      }
+    }
+    log(`  Pages 已启用（${cur.build_type || 'legacy'} 模式）: ${cur.html_url}`);
     return cur;
   } catch (e) {
     if (e.status !== 404) log(`  查询 Pages 状态: ${e.message}`);
