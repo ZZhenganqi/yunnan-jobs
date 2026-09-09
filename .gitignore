@@ -4,3 +4,4 @@ fixtures/
 .DS_Store
 gh-token
 .gh-token
+logs/

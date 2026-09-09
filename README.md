@@ -115,39 +115,58 @@ export const profile = {
 
 ## 四、定时自动更新
 
-### 方案 A：GitHub Actions（推荐，免费且自动托管）
+### 当前架构（重要：为什么不用 GitHub Actions 抓取）
 
-1. 在 GitHub 新建空仓库（不要勾选 README / .gitignore）
-3. **双击 `双击推送.bat`**，脚本会自动完成 git push。推送成功后会自动打开
-   仓库的 Pages 设置页和 Actions 页
+实测结论：**GitHub Actions 在海外，抓国内政府网站只有 6/20 成功率**，
+而且它会用残缺数据覆盖本地抓到的完整数据（实测 249 → 203 → 54 条，逐次缩水）。
 
-   （想手动执行也可以：）
+所以采用的是：
 
-```bash
-git remote add origin https://github.com/<你的用户名>/<仓库名>.git
-git branch -M main
-git push -u origin main
+```
+本机抓取（20/20 成功）→ publish.mjs 推送 data/ → GitHub Actions 只负责部署 Pages
 ```
 
-4. 仓库 **Settings → Pages → Source 选 GitHub Actions**
-5. 进 Actions 页面点 *Run workflow* 手动跑第一次，跑完就有公网网址
-6. 之后工作流会在**北京时间每天 08:00 和 20:00** 自动抓取并更新
+`.github/workflows/update.yml` 里**没有抓取步骤**，只在 `data/` 变更时触发部署。
 
-最终网址：`https://<用户名>.github.io/<仓库名>/`，手机电脑都能开。
+### 一键设置每日自动更新（推荐）
 
-> 首次推送若弹出 GitHub 登录窗口，用浏览器授权即可（Git 会自动保存凭据，之后不再问）。
-> 若提示输入密码，需要改用 Personal Access Token：GitHub → Settings → Developer settings
-> → Personal access tokens → Tokens (classic) → 勾选 `repo` 权限生成，粘贴当密码用。
+**双击 `注册每日自动更新.bat`**
 
-### 方案 B：本机 Windows 计划任务
+它会自动注册一个 Windows 计划任务：
+
+| 项目 | 值 |
+|---|---|
+| 触发时间 | 每天 **08:00** 和 **20:00** |
+| 执行内容 | 抓取 20 个源 → 发布到 GitHub Pages |
+| 错过补跑 | 开机晚了会自动补跑一次 |
+| 网络要求 | 仅联网时运行（断网自动跳过） |
+| 运行日志 | `logs/daily-<时间戳>.log` |
+
+注册后想立刻试跑一次：
 
 ```powershell
-# 每天 8:00 和 20:00 自动抓取（修改路径后执行）
-$trigger1 = New-ScheduledTaskTrigger -Daily -At 08:00
-$trigger2 = New-ScheduledTaskTrigger -Daily -At 20:00
-$action = New-ScheduledTaskAction -Execute "node" -Argument "D:\WB\yunnan-jobs\scripts\fetch.mjs" -WorkingDirectory "D:\WB\yunnan-jobs"
-Register-ScheduledTask -TaskName "云南公考编招抓取" -Trigger $trigger1,$trigger2 -Action $action
+Start-ScheduledTask -TaskName '云南公考编招-每日更新'
 ```
+
+想取消：双击 **`取消每日自动更新.bat`**。
+
+### 手动更新
+
+- 想看过程、要弹浏览器：**双击 `一键更新并发布.bat`**
+- 静默执行（计划任务用的就是这个）：`scripts\daily-update.bat`
+
+> **注意**：计划任务环境读取不到 WorkBuddy 注入的 PATH，`daily-update.bat`
+> 会自动探测 `node.exe`（优先 PATH，其次 `~/.workbuddy/binaries/node/versions/`
+> 下版本号最高的，最后 `C:\Program Files\nodejs\`）。如果你的 Node 装在别处，
+> 编辑 `scripts\daily-update.bat` 里的 `NODE_EXE` 探测段即可。
+
+### 部署上线（首次或换仓库时）
+
+1. 在 GitHub 新建空仓库（**不要**勾选 README / .gitignore）
+2. 如需新增 `.github/workflows`，PAT 必须额外勾选 **`workflow`** 权限
+   （只勾 `repo` 时 GitHub 会返回 **404** 而非 403，极具误导性）
+3. **双击 `双击推送.bat`**，自动完成 git push
+4. 仓库 **Settings → Pages → Source 选 GitHub Actions**
 
 ---
 
@@ -156,10 +175,21 @@ Register-ScheduledTask -TaskName "云南公考编招抓取" -Trigger $trigger1,$
 ```bash
 node scripts/fetch.mjs             # 抓取 + 正文增强（默认）
 node scripts/fetch.mjs --no-detail # 只抓列表，速度快但不识别正文要求
+node scripts/publish.mjs           # 把 data/ 发布到 GitHub Pages
+node scripts/publish.mjs --token=<pat>  # 首次或 token 失效时
 node scripts/serve.mjs             # 本地预览 http://localhost:8787
+node scripts/ghdeploy.mjs          # 用 GitHub API 推送全部源码（含 workflow）
 ```
 
 `PORT=3000 node scripts/serve.mjs` 可换端口。
+
+**日常只需双击**：
+
+| 文件 | 用途 |
+|---|---|
+| `一键更新并发布.bat` | 手动更新（有过程提示、会打开浏览器） |
+| `注册每日自动更新.bat` | 注册每天 08:00 / 20:00 自动更新 |
+| `取消每日自动更新.bat` | 取消自动更新 |
 
 ---
 
