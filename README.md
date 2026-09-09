@@ -118,7 +118,10 @@ export const profile = {
 ### 方案 A：GitHub Actions（推荐，免费且自动托管）
 
 1. 在 GitHub 新建空仓库（不要勾选 README / .gitignore）
-2. 关联并推送（本地仓库已初始化）：
+3. **双击 `部署到GitHub.bat`**，输入 GitHub 用户名和仓库名，脚本会自动完成
+   关联远端、切分支、推送，不用手敲 git 命令
+
+   （想手动执行也可以：）
 
 ```bash
 git remote add origin https://github.com/<你的用户名>/<仓库名>.git
@@ -126,13 +129,15 @@ git branch -M main
 git push -u origin main
 ```
 
-3. 仓库 **Settings → Pages → Source 选 GitHub Actions**
-4. 工作流会在**北京时间每天 08:00 和 20:00** 自动抓取并提交
-5. 也可在 Actions 页面点 *Run workflow* 手动立即执行
+4. 仓库 **Settings → Pages → Source 选 GitHub Actions**
+5. 进 Actions 页面点 *Run workflow* 手动跑第一次，跑完就有公网网址
+6. 之后工作流会在**北京时间每天 08:00 和 20:00** 自动抓取并更新
 
-完成后会得到一个公网网址（`https://<用户名>.github.io/<仓库名>/`），手机电脑都能开。
+最终网址：`https://<用户名>.github.io/<仓库名>/`，手机电脑都能开。
 
-> 首次推送若提示登录，用 GitHub 账号授权即可；推荐使用 Personal Access Token 作为密码。
+> 首次推送若弹出 GitHub 登录窗口，用浏览器授权即可（Git 会自动保存凭据，之后不再问）。
+> 若提示输入密码，需要改用 Personal Access Token：GitHub → Settings → Developer settings
+> → Personal access tokens → Tokens (classic) → 勾选 `repo` 权限生成，粘贴当密码用。
 
 ### 方案 B：本机 Windows 计划任务
 
