@@ -1,0 +1,54 @@
+name: 定时抓取云南公考编招信息
+
+on:
+  schedule:
+    # UTC 时间；北京时间 = UTC + 8
+    # 每天 08:00 与 20:00（北京时间）各抓取一次
+    - cron: '0 0,12 * * *'
+  workflow_dispatch:   # 允许在 Actions 页面手动点一次立即抓取
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 抓取官方招聘信息
+        run: node scripts/fetch.mjs
+
+      - name: 提交更新后的数据
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ || true
+          if git diff --staged --quiet; then
+            echo "数据无变化，跳过提交"
+          else
+            git commit -m "chore(data): 更新招聘数据 $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+  deploy:
+    needs: fetch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - id: deployment
+        uses: actions/deploy-pages@v4

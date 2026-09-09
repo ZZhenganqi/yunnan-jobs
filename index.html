@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>云南公考编招 · 实时招聘平台</title>
+<style>
+  :root{
+    --bg:#f5f7f6; --card:#ffffff; --line:#e3e8e5; --line2:#eef1ef;
+    --tx:#1a1d21; --tx2:#5b6570; --tx3:#8b959e;
+    --brand:#16794a; --brand-soft:#e8f3ed; --brand-dark:#0f5c37;
+    --blue:#1668dc; --blue-soft:#e8f1fd;
+    --amber:#b26a00; --amber-soft:#fdf3e2;
+    --red:#c0392b; --red-soft:#fdecea;
+    --radius:12px; --shadow:0 1px 2px rgba(16,24,20,.06),0 4px 14px rgba(16,24,20,.05);
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+
+  /* header */
+  header{background:linear-gradient(135deg,#16794a,#0f5c37);color:#fff;padding:22px 0 20px}
+  header h1{margin:0;font-size:21px;font-weight:700;letter-spacing:.3px}
+  header .sub{margin-top:6px;font-size:13px;opacity:.9}
+  .stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .stat{background:rgba(255,255,255,.16);border-radius:8px;padding:6px 11px;font-size:12.5px;backdrop-filter:blur(4px)}
+  .stat b{font-size:15px;font-weight:700}
+
+  /* profile card */
+  .profile{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:12px 14px;margin-top:16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:var(--shadow)}
+  .profile .lb{font-size:12.5px;color:var(--tx3);margin-right:2px}
+  .chip{display:inline-flex;align-items:center;gap:5px;background:var(--brand-soft);color:var(--brand-dark);
+    border:1px solid #cfe6da;border-radius:999px;padding:3px 11px;font-size:12.5px;font-weight:600}
+  .profile .hint{margin-left:auto;font-size:12px;color:var(--tx3)}
+
+  /* filters */
+  .filters{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px;margin-top:12px;box-shadow:var(--shadow)}
+  .search{display:flex;gap:8px;margin-bottom:12px}
+  .search input{flex:1;padding:9px 13px;border:1px solid var(--line);border-radius:9px;font-size:14px;outline:none;background:#fbfcfb}
+  .search input:focus{border-color:var(--brand);background:#fff}
+  .btn{padding:9px 15px;border:1px solid var(--line);background:#fff;border-radius:9px;cursor:pointer;font-size:13.5px;color:var(--tx2)}
+  .btn:hover{border-color:var(--brand);color:var(--brand)}
+  .btn.pri{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .btn.pri:hover{background:var(--brand-dark);color:#fff}
+
+  .frow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:10px}
+  .frow .flabel{font-size:12.5px;color:var(--tx3);margin-right:4px;min-width:52px}
+  .cat{font-size:12.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);
+    background:#fff;cursor:pointer;color:var(--tx2);transition:.15s}
+  .cat:hover{border-color:var(--brand)}
+  .cat.on{background:var(--brand);color:#fff;border-color:var(--brand);font-weight:600}
+  .cat .n{opacity:.65;font-size:11.5px;margin-left:3px}
+
+  .opts{display:flex;flex-wrap:wrap;gap:14px;padding-top:10px;border-top:1px dashed var(--line)}
+  .sw{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);cursor:pointer;user-select:none}
+  .sw input{accent-color:var(--brand);width:15px;height:15px;cursor:pointer}
+  .slider{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--tx2)}
+  .slider input{accent-color:var(--brand);width:110px}
+  .slider b{color:var(--brand);min-width:34px;font-size:13.5px}
+
+  /* list */
+  .listhead{display:flex;justify-content:space-between;align-items:center;margin:18px 2px 8px}
+  .listhead h2{margin:0;font-size:15px;font-weight:700}
+  .listhead .cnt{font-size:12.5px;color:var(--tx3)}
+
+  .job{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:13px 15px;margin-bottom:9px;box-shadow:var(--shadow);transition:.15s;position:relative}
+  .job:hover{border-color:#c5dbd0;box-shadow:0 2px 4px rgba(16,24,20,.07),0 8px 22px rgba(16,24,20,.07)}
+  .job.starred{border-color:#e8c65c;background:#fffdf6}
+  .jtop{display:flex;gap:11px;align-items:flex-start}
+  .score{flex:0 0 auto;width:46px;text-align:center;border-radius:9px;padding:5px 0}
+  .score .v{display:block;font-size:18px;font-weight:800;line-height:1.15}
+  .score .t{display:block;font-size:10px;opacity:.8;transform:scale(.92)}
+  .s-hi{background:#e8f3ed;color:#0f5c37}
+  .s-md{background:var(--blue-soft);color:#1259b8}
+  .s-lo{background:var(--amber-soft);color:var(--amber)}
+  .s-no{background:#f1f3f2;color:#8b959e}
+  .jmain{flex:1;min-width:0}
+  .jtitle{font-size:15px;font-weight:600;line-height:1.5;color:var(--tx);word-break:break-word}
+  .jtitle:hover{color:var(--brand);text-decoration:underline}
+  .jmeta{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px;font-size:12px;color:var(--tx3);align-items:center}
+  .tag{background:#f1f4f2;color:var(--tx2);border-radius:5px;padding:1px 7px;font-size:11.5px}
+  .tag.cat{background:var(--blue-soft);color:#1259b8}
+  .tag.date{background:#eef1ef;color:var(--tx2);font-variant-numeric:tabular-nums}
+  .tag.new{background:var(--red-soft);color:var(--red);font-weight:600}
+  .reasons{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+  .rs{font-size:11.5px;padding:2px 8px;border-radius:5px;background:var(--brand-soft);color:var(--brand-dark);border:1px solid #d5e9de}
+  .rs.bad{background:var(--red-soft);color:var(--red);border-color:#f5d5d1}
+  .star{position:absolute;right:12px;top:12px;cursor:pointer;font-size:16px;opacity:.28;transition:.15s;line-height:1}
+  .star:hover{opacity:.6}
+  .star.on{opacity:1;color:#e8b923}
+
+  .empty{text-align:center;padding:50px 20px;color:var(--tx3);font-size:14px}
+  .empty .big{font-size:34px;margin-bottom:10px;opacity:.5}
+
+  /* sections */
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px 16px;margin:18px 0;box-shadow:var(--shadow)}
+  .sec h3{margin:0 0 10px;font-size:14px;font-weight:700;display:flex;align-items:center;gap:7px}
+  .sec h3 .dot{width:6px;height:6px;border-radius:50%;background:var(--brand)}
+  .links{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:7px}
+  .links a{display:block;padding:8px 11px;border:1px solid var(--line2);border-radius:8px;font-size:13px;
+    background:#fbfcfb;transition:.15s}
+  .links a:hover{border-color:var(--brand);background:var(--brand-soft);color:var(--brand-dark)}
+  .srcst{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px;font-size:12.5px}
+  .srcst div{display:flex;justify-content:space-between;gap:8px;padding:5px 9px;background:#fbfcfb;border-radius:7px;border:1px solid var(--line2)}
+  .ok{color:var(--brand);font-weight:600}
+  .bad{color:var(--red);font-weight:600}
+
+  details.info{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:0 16px;margin:18px 0}
+  details.info summary{cursor:pointer;padding:13px 0;font-size:13.5px;font-weight:600;color:var(--tx2)}
+  details.info .bd{padding:0 0 14px;font-size:13px;color:var(--tx2);line-height:1.75}
+  details.info code{background:#f1f4f2;padding:1px 6px;border-radius:4px;font-size:12px}
+  footer{text-align:center;padding:26px 0 34px;color:var(--tx3);font-size:12px}
+
+  @media (max-width:640px){
+    header h1{font-size:18px}
+    .wrap{padding:0 11px}
+    .jtitle{font-size:14.5px}
+    .profile .hint{margin-left:0;width:100%}
+    .frow .flabel{min-width:100%}
+    .search{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>云南公考编招 · 实时招聘平台</h1>
+    <div class="sub">官方一手数据源 · 自动定时更新 · 按个人画像精准匹配</div>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="profile">
+    <span class="lb">我的画像</span>
+    <span class="chip" id="pf-school">—</span>
+    <span class="chip" id="pf-major">—</span>
+    <span class="chip" id="pf-degree">—</span>
+    <span class="chip" id="pf-pol">—</span>
+    <span class="hint">修改画像：编辑 <code>config/profile.mjs</code> 后重新运行抓取</span>
+  </div>
+
+  <div class="filters">
+    <div class="search">
+      <input id="q" type="search" placeholder="搜索关键词，如：农业、信息化、硕士、昆明…" autocomplete="off">
+      <button class="btn" id="btn-reset">重置</button>
+    </div>
+
+    <div class="frow"><span class="flabel">类别</span><span id="cats"></span></div>
+
+    <div class="opts">
+      <label class="slider">最低适配度 <input type="range" id="minscore" min="0" max="100" step="5" value="0"><b id="minscore-v">0</b></label>
+      <label class="sw"><input type="checkbox" id="hideProc" checked>隐藏考务流程信息</label>
+      <label class="sw"><input type="checkbox" id="hidePub">隐藏公示/拟聘用</label>
+      <label class="sw"><input type="checkbox" id="onlyLive">只看在招岗位</label>
+      <label class="sw"><input type="checkbox" id="onlyStar">只看已收藏</label>
+      <label class="sw">时间
+        <select id="range" style="border:1px solid var(--line);border-radius:7px;padding:4px 7px;font-size:13px;background:#fff">
+          <option value="0">全部</option><option value="30">近30天</option>
+          <option value="90" selected>近90天</option><option value="180">近半年</option>
+        </select>
+      </label>
+      <label class="sw">排序
+        <select id="sort" style="border:1px solid var(--line);border-radius:7px;padding:4px 7px;font-size:13px;background:#fff">
+          <option value="score">适配度</option><option value="date">发布时间</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="listhead">
+    <h2>岗位列表</h2>
+    <span class="cnt" id="cnt"></span>
+  </div>
+  <div id="list"></div>
+
+  <div class="sec">
+    <h3><span class="dot"></span>官方渠道直达<span style="font-weight:400;color:var(--tx3);font-size:12px">（含反爬站点，建议人工查看）</span></h3>
+    <div class="links" id="official"></div>
+  </div>
+
+  <div class="sec">
+    <h3><span class="dot"></span>数据源运行状态</h3>
+    <div class="srcst" id="srcst"></div>
+  </div>
+
+  <details class="info">
+    <summary>适配度打分规则说明</summary>
+    <div class="bd">
+      适配度由后端按你的画像自动计算（满分 100），规则在 <code>config/profile.mjs</code> 可改：<br>
+      · <b>地域</b>：标题含云南州市 +30；云南官方源发布 +22<br>
+      · <b>在招信号</b>：含招聘/招考/招录/引进/遴选 +18<br>
+      · <b>专业匹配</b>：命中农业工程、信息技术、智慧农业、计算机等关键词，每个 +12（最多 3 个）<br>
+      · <b>学历/身份</b>：硕士可报 +15；中共党员 +8；应届校招 +8<br>
+      · <b>类别</b>：选调生 +8；省考/事业单位/科研院所 +6；国考 +4；医疗 -12<br>
+      · <b>时间衰减</b>：30天内 +15，90天内 +8，半年内 0，半年以上 -12，一年以上 -30<br>
+      · <b>降权</b>：公示/拟聘用 -20；考务流程信息 -45；明确不符（博士、医师等）-25<br>
+      <br>点击每条右侧的 ☆ 可收藏，收藏状态保存在本机浏览器。
+    </div>
+  </details>
+
+  <footer>
+    数据源全部为官方权威渠道，本平台仅做信息聚合与官方链接跳转，招聘岗位以官方公告原文为准。
+  </footer>
+</div>
+
+<script src="data/jobs.js" onerror="window.__JOBS_LOAD_FAIL=1"></script>
+<script>
+const $ = id => document.getElementById(id);
+let DATA = { jobs: [], meta: {}, officialLinks: [] };
+let stars = new Set(JSON.parse(localStorage.getItem('yn_stars') || '[]'));
+const cats = new Set();
+
+async function load() {
+  try {
+    const r = await fetch('data/jobs.json?t=' + Date.now());
+    if (r.ok) { DATA = await r.json(); return; }
+  } catch (e) {}
+  if (window.__JOBS__) DATA = window.__JOBS__;
+}
+
+function scoreCls(s) { return s >= 70 ? 's-hi' : s >= 50 ? 's-md' : s >= 30 ? 's-lo' : 's-no'; }
+
+function daysAgo(d) {
+  if (!d) return 9999;
+  return (Date.now() - new Date(d).getTime()) / 86400000;
+}
+
+function render() {
+  const q = $('q').value.trim().toLowerCase();
+  const min = +$('minscore').value;
+  const hideProc = $('hideProc').checked;
+  const hidePub = $('hidePub').checked;
+  const onlyLive = $('onlyLive').checked;
+  const onlyStar = $('onlyStar').checked;
+  const range = +$('range').value;
+  const sort = $('sort').value;
+  const active = [...cats];
+
+  let rows = DATA.jobs.filter(j => {
+    if (min && j.score < min) return false;
+    if (q && !(j.title + j.sourceName + j.org + (j.reasons || []).join('')).toLowerCase().includes(q)) return false;
+    if (active.length && !active.includes(j.category)) return false;
+    const f = j.flags || [];
+    if (hideProc && (f.includes('考务流程') || f.includes('考务安排'))) return false;
+    if (hidePub && f.includes('公示')) return false;
+    if (onlyLive && !f.includes('在招')) return false;
+    if (onlyStar && !stars.has(j.id)) return false;
+    if (range && daysAgo(j.date) > range) return false;
+    return true;
+  });
+
+  rows.sort((a, b) => sort === 'date'
+    ? (b.date || '').localeCompare(a.date || '') || b.score - a.score
+    : b.score - a.score || (b.date || '').localeCompare(a.date || ''));
+
+  $('cnt').textContent = `共 ${rows.length} 条 / 总库 ${DATA.jobs.length} 条`;
+
+  const box = $('list');
+  if (!rows.length) {
+    box.innerHTML = `<div class="empty"><div class="big">🔍</div>没有符合条件的岗位<br><span style="font-size:12.5px">试试放宽筛选条件，或清空搜索词</span></div>`;
+    return;
+  }
+
+  box.innerHTML = rows.slice(0, 400).map(j => {
+    const f = j.flags || [];
+    const isNew = daysAgo(j.date) <= 7;
+    const rs = (j.reasons || []).map(r =>
+      `<span class="rs ${/不符|公示|考务|过期|以上|无发布/.test(r) ? 'bad' : ''}">${esc(r)}</span>`).join('');
+    return `<div class="job ${stars.has(j.id) ? 'starred' : ''}">
+      <span class="star ${stars.has(j.id) ? 'on' : ''}" data-id="${j.id}" title="收藏">${stars.has(j.id) ? '★' : '☆'}</span>
+      <div class="jtop">
+        <div class="score ${scoreCls(j.score)}"><span class="v">${j.score}</span><span class="t">适配度</span></div>
+        <div class="jmain">
+          <a class="jtitle" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+          <div class="jmeta">
+            <span class="tag cat">${esc(j.category)}</span>
+            ${j.date ? `<span class="tag date ${isNew ? 'new' : ''}">${esc(j.date)}</span>` : '<span class="tag date">无日期</span>'}
+            <span class="tag">${esc(j.region)}</span>
+            <span>${esc(j.org || j.sourceName)}</span>
+          </div>
+          ${rs ? `<div class="reasons">${rs}</div>` : ''}
+          <div class="jmeta" style="margin-top:7px">
+            <a href="${esc(j.url)}" target="_blank" rel="noopener" style="color:var(--brand);font-size:12px;font-weight:600">查看官方公告原文 →</a>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  box.querySelectorAll('.star').forEach(el => el.onclick = () => {
+    const id = el.dataset.id;
+    if (stars.has(id)) stars.delete(id); else stars.add(id);
+    localStorage.setItem('yn_stars', JSON.stringify([...stars]));
+    render();
+  });
+}
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function buildCats() {
+  const map = new Map();
+  DATA.jobs.forEach(j => map.set(j.category, (map.get(j.category) || 0) + 1));
+  const order = ['选调生', '国考', '省考', '事业单位', '科研院所', '高校', '国企', '医疗', '其他'];
+  const keys = [...map.keys()].sort((a, b) => {
+    const ia = order.indexOf(a), ib = order.indexOf(b);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
+  $('cats').innerHTML = keys.map(k =>
+    `<span class="cat" data-c="${esc(k)}">${esc(k)}<span class="n">${map.get(k)}</span></span>`).join('');
+  $('cats').querySelectorAll('.cat').forEach(el => el.onclick = () => {
+    const c = el.dataset.c;
+    if (cats.has(c)) cats.delete(c); else cats.add(c);
+    el.classList.toggle('on', cats.has(c));
+    render();
+  });
+}
+
+function renderMeta() {
+  const m = DATA.meta || {};
+  const p = m.profile || {};
+  $('pf-school').textContent = p.school || '—';
+  $('pf-major').textContent = p.major || '—';
+  $('pf-degree').textContent = (p.degree || '—') + '研究生';
+  $('pf-pol').textContent = p.politics || '—';
+
+  const live = DATA.jobs.filter(j => (j.flags || []).includes('在招')).length;
+  const wk = DATA.jobs.filter(j => daysAgo(j.date) <= 30).length;
+  const hi = DATA.jobs.filter(j => j.score >= 60).length;
+  const ok = (m.sources || []).filter(s => s.ok).length;
+  $('stats').innerHTML = [
+    ['岗位总数', m.total || DATA.jobs.length],
+    ['在招岗位', live],
+    ['30天内更新', wk],
+    ['高匹配', hi],
+    ['数据源', `${ok}/${(m.sources || []).length}`],
+    ['更新时间', (m.updatedAtLocal || '—')],
+  ].map(([k, v]) => `<span class="stat">${k} <b>${esc(v)}</b></span>`).join('');
+
+  $('official').innerHTML = (DATA.officialLinks || []).map(l =>
+    `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.name)}</a>`).join('');
+
+  $('srcst').innerHTML = (m.sources || []).map(s =>
+    `<div><span>${esc(s.name)}</span><span class="${s.ok ? 'ok' : 'bad'}">${s.ok ? s.count + ' 条' : '失败'}</span></div>`).join('')
+    || '<div style="color:var(--tx3)">暂无状态</div>';
+}
+
+function bind() {
+  $('q').oninput = render;
+  $('minscore').oninput = e => { $('minscore-v').textContent = e.target.value; render(); };
+  ['hideProc', 'hidePub', 'onlyLive', 'onlyStar', 'range', 'sort'].forEach(id => $(id).onchange = render);
+  $('btn-reset').onclick = () => {
+    $('q').value = ''; cats.clear();
+    $('minscore').value = 0; $('minscore-v').textContent = '0';
+    $('hideProc').checked = true; $('hidePub').checked = false;
+    $('onlyLive').checked = false; $('onlyStar').checked = false;
+    $('range').value = '90'; $('sort').value = 'score';
+    $('cats').querySelectorAll('.cat').forEach(el => el.classList.remove('on'));
+    render();
+  };
+}
+
+(async function init() {
+  await load();
+  if (!DATA.jobs.length) {
+    $('list').innerHTML = `<div class="empty"><div class="big">📭</div>尚未生成数据<br>
+      <span style="font-size:12.5px">请先运行 <code>node scripts/fetch.mjs</code> 抓取岗位</span></div>`;
+    return;
+  }
+  renderMeta(); buildCats(); bind(); render();
+})();
+</script>
+</body>
+</html>
