@@ -6,7 +6,7 @@ set LOG=%~dp0_push.log
 echo ============================================ >  "%LOG%"
 echo   云南公考编招平台 - 推送日志                    >> "%LOG%"
 echo   %date% %time%                                 >> "%LOG%"
-echo   仓库: https://github.com/ZZhengqian/yunnan-jobs >> "%LOG%"
+echo   仓库: https://github.com/ZZhenganqi/yunnan-jobs >> "%LOG%"
 echo ============================================ >> "%LOG%"
 echo. >> "%LOG%"
 
@@ -42,8 +42,8 @@ if %RC% neq 0 (
 echo  推送成功！正在打开 GitHub 页面...
 echo.
 
-start https://github.com/ZZhengqian/yunnan-jobs/actions
-start https://github.com/ZZhengqian/yunnan-jobs/settings/pages
+start https://github.com/ZZhenganqi/yunnan-jobs/actions
+start https://github.com/ZZhenganqi/yunnan-jobs/settings/pages
 echo  已打开 Actions 页面和 Pages 设置页面。
 echo  1. 在 Pages 页把 Source 选成 "GitHub Actions"
 echo  2. 进 Actions 页手动点 Run workflow 跑一次
