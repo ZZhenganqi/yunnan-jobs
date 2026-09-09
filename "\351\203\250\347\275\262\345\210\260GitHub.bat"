@@ -1,0 +1,69 @@
+@echo off
+chcp 65001 >nul 2>nul
+setlocal
+cd /d "%~dp0"
+
+echo.
+echo ============================================
+echo    云南公考编招平台 - 一键部署到 GitHub
+echo ============================================
+echo.
+echo  开始前请确认一件事：
+echo  你已在 GitHub 网页建好一个「空仓库」。
+echo  （建仓时不要勾选 README / .gitignore / License）
+echo.
+echo  建仓地址: https://github.com/new
+echo.
+pause
+
+set /p GHUSER=请输入你的 GitHub 用户名:
+if "%GHUSER%"=="" (
+  echo 用户名不能为空。
+  pause
+  exit /b 1
+)
+
+set /p GHREPO=请输入仓库名（直接回车使用 yunnan-jobs）:
+if "%GHREPO%"=="" set GHREPO=yunnan-jobs
+
+echo.
+echo  目标仓库: https://github.com/%GHUSER%/%GHREPO%
+echo.
+
+git remote remove origin >nul 2>nul
+git remote add origin https://github.com/%GHUSER%/%GHREPO%.git
+git branch -M main
+
+echo  正在推送。若弹出 GitHub 登录窗口，请完成授权...
+echo.
+git push -u origin main
+
+if errorlevel 1 (
+  echo.
+  echo  [推送失败] 常见原因:
+  echo   1. 仓库还没建，或用户名 / 仓库名写错
+  echo   2. 登录窗口被取消，或没有登录成功
+  echo   3. 网络不通
+  echo.
+  echo  检查后重新双击本脚本即可，已输入的内容会再问一次。
+  echo.
+  pause
+  exit /b 1
+)
+
+echo.
+echo ============================================
+echo    推送成功！还差最后两步
+echo ============================================
+echo.
+echo  1. 在打开的网页里，Source 选择 "GitHub Actions"
+echo  2. 然后打开 Actions 页面，点 Run workflow 手动跑第一次
+echo     跑完回到 Pages 页面就能看到公网网址
+echo.
+echo  你的网址将是:
+echo     https://%GHUSER%.github.io/%GHREPO%/
+echo.
+echo  之后每天北京时间 08:00 和 20:00 会自动更新。
+echo.
+start https://github.com/%GHUSER%/%GHREPO%/settings/pages
+pause

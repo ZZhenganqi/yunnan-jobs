@@ -46,6 +46,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: 清理非发布文件
+        run: rm -rf .git .github node_modules scripts config data/prev-ids.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
